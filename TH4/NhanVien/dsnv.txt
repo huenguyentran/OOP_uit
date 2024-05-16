@@ -1,0 +1,4 @@
+------danh sach nhan vien------
+a aa a	2/2/2024		so ngay lam viec: 20		luong: 2000000.000VNd
+ss ss	34556		luong co ban: 2000000.000		so san pham: 30		luong: 2150000.000
+df fghj ff	2341		so ngay lam viec: 23		luong: 2300000.000VNd
