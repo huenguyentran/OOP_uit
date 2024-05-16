@@ -1,0 +1,18 @@
+XUAT DON HANG THU 0
+Don hang: 12345
+Ngay lap don hang: 2/2/2023
+Gia tri don hang: 1432107619
+Thong tin khach hang
+Ma khach hang: kh567
+Ten khach hang: nh thi sam
+Dia chi: HCM
+So dien thoai 0900002
+Goi san pham
+GOI SAN PHAM: goi2345
+Loai goi: 1
+Ten goi san pham: Datafuck
+Tong gia tri goi: 1869181806
+Nuoc hoa: 3456 - 0 - 2 (ml) - 40
+Dau goi:  - 0 - 1869767529 (ml) - -1259355084
+Sua tam: 234daugoi - 1 - 4566 (ml) - 182640
+----------------------
