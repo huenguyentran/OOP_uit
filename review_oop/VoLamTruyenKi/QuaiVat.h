@@ -13,6 +13,6 @@ public:
 	virtual int tinh_sat_thuong() = 0;
 	int he() { return heQV; }
 	void nhap();
-	void xuat();
+	virtual void xuat();
 };
 

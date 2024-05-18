@@ -3,7 +3,7 @@
 void NhanVat::nhap()
 {
 	cout << "Nhap ten nguoi choi: ";
-	cin.ignore(0);
+	cin.ignore();
 	getline(cin, tenNV);
 	cout << "0_He kim, 1_He moc, 2_He thuy, 3_He hoa, 4_He tho: ";
 	do { cout << "\nNhap hanh: "; cin >> heNV; }
@@ -28,7 +28,7 @@ void NhanVat::nhap()
 		break;
 	}
 
-	do { cout << "\n Nhap Mon phai: "; cin >> monPhai; }
+	do { cout << "\nNhap Mon phai: "; cin >> monPhai; }
 	while (monPhai != 0 && monPhai != 1);
 
 	cout << "Nhap cap do: ";

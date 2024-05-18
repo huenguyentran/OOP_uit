@@ -110,7 +110,7 @@ void DanhSach::tuong_tac()
 	{
 		cout << "Nhap stt: ";
 		cin >> A_stt;
-	} while (A_stt < 0 || A_stt >= (A_loaipt == 0) ? so_luongNC : so_luongQV);
+	} while (A_stt < 0 || A_stt >= ((A_loaipt == 0) ? so_luongNC : so_luongQV));
 
 	if (A_loaipt == 0)
 	{
