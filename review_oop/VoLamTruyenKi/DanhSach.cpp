@@ -2,6 +2,17 @@
 #include "QVDauLinh.h"
 #include "QVThongThuong.h"
 
+DanhSach::~DanhSach()
+{
+	for (int i = 0; i < so_luongNC; i++)
+		delete pNguoiChoi[i];
+	pNguoiChoi.resize(0);
+
+	for (int i = 0; i < so_luongQV; i++)
+		delete pQuaiVat[i];
+	pQuaiVat.resize(0);
+}
+
 void DanhSach::nhap_ds()
 {
 	cout << "NHAP QUAI VAT\n";

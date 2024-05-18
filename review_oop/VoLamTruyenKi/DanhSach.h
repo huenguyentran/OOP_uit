@@ -10,6 +10,9 @@ private:
 	vector <NhanVat*> pNguoiChoi;
 	int so_luongQV, so_luongNC;
 public:
+	~DanhSach();
+
+
 	void nhap_ds();
 	void xuat_ds();
 
