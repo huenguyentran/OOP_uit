@@ -1,0 +1,9 @@
+XUAT TT 1 XE:
+ma so xe :1234
+DONG CO
+Ma so: dongco1	Hang san xuat: hang a	loai dong co: A 	Don gia: 500
+BANH XE
+Ma so: banhxe1	Hang san xuat: nnh ss	Loai khung: khung nhom	Don gia: 400
+KHUNG XE
+Ma so: khungxe	Hang san xuat: s ee	Loai khung: khung nhom	Don gia: 200
+DON GIA: 1100
