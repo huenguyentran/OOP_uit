@@ -30,15 +30,15 @@ bool BanCo::DatManhVaoBanCo(ManhDon* p)
 	cout << "x: "; cin >> x;
 	cout << "y: "; cin >> y;
 
-	if (0 <= x && x <= 6 && 0 <= y && y <= 6) // van conn sai
+	if (0 <= x && x < HANGBANCO && 0 <= y && y < COTBANCO) // van conn sai
 	{
 		ManhDon temp;
 		for (int i = 0; i < 4; i++)
 		{
 			for (int j = 0; j < 4; j++)
 			{
-				if (banCO[x + i][y + j] == 'x')
-					temp.taomanh(i, j);
+				if (banCO[x + i][y + j] == 'x' || x + i >= HANGBANCO || j + y >= COTBANCO)
+					temp.taoOGach(i, j);
 			}
 		}
 		if (p->CoTheDat(temp))//neu co the dat vao vi tri x, y--> dat vao
@@ -47,7 +47,7 @@ bool BanCo::DatManhVaoBanCo(ManhDon* p)
 			{
 				for (int j = 0; j < 4; j++)
 				{
-					if (p->laymanh(i, j) == 'x') banCO[x + i][y + j] = 'x';
+					if (p->layOcuaManh(i, j) == 'x') banCO[x + i][y + j] = 'x';
 				}
 			}
 			return 1;

@@ -30,6 +30,8 @@ bool ManhDon::CoTheDat(const ManhDon& other)
 	}
 	return 1;
 }
+
+
 void ManhDon::taoManhtrong()
 {
 	for (int i = 0; i < 4; i++)

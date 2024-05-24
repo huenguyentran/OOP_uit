@@ -77,12 +77,12 @@ void game::xuligame()
 			while ( nchon == 2 && banCO.DatManhVaoBanCo(pManhDon) == 0 )
 			{
 				cout << "vi tri dat khong hop le!!!\n"
-					<< "2_Dat lai manh, 3_bo manh";
+					<< "2_Dat lai manh, 3_bo manh: ";
 				cin >> nchon;
 			}
-			if (nchon == 3) // bo manh nguoi choi ko tim duoc vi tri 
-				phatsinhmanh();
-			else banCO.xuat();// manh dat duoc vao --> xuat ban co
+			if (nchon == 2) // bo manh nguoi choi ko tim duoc vi tri 
+				banCO.xuat();// manh dat duoc vao --> xuat ban co
+			phatsinhmanh();
 			break;
 		case 3:
 			phatsinhmanh();

@@ -9,7 +9,7 @@ ManhDonZphai::ManhDonZphai() :ManhDon()
 }
 void ManhDonZphai::Xoay()
 {
-	if (manhDon[0][0] == '.')
+	if (manhDon[0][0] == 'x')
 	{
 		taoManhtrong();
 		manhDon[1][0] = 'x';
