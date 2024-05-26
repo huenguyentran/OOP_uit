@@ -1,18 +1,9 @@
 #pragma once
-#include "game.h"
-
-class QuaiVat
+#include "PhanTu.h"
+class QuaiVat:public PhanTu
 {
-protected:
-	string tenQV;
-	int satThuong;
-	int capDo;
-	int heQV;
 public:
-
-	virtual int tinh_sat_thuong() = 0;
-	int he() { return heQV; }
-	void nhap();
-	virtual void xuat();
+	virtual double SatThuong() = 0;
+	virtual string tostring() = 0;
 };
 

@@ -1,12 +1,12 @@
 #include "QVDauLinh.h"
-
-int QVDauLinh::tinh_sat_thuong()
+double QVDauLinh::SatThuong()
 {
-	return satThuong = capDo * 7;
+	return capDo * 7;
 }
 
-void QVDauLinh::xuat()
+string QVDauLinh::tostring()
 {
-	cout << "QV Dau linh\t\t";
-	QuaiVat::xuat();
+	stringstream s;
+	s << "QV Dau Linh: " << PhanTu::tostring() << "\n";
+	return s.str();
 }
