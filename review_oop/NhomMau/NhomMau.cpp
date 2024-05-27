@@ -5,10 +5,15 @@ NhomMau::NhomMau()
 	pRh = NULL;
 }
 
+NhomMau::NhomMau(const NhomMau& a)
+{
+	this->pABO = a.pABO;
+	this->pRh = a.pRh;
+}
+
 NhomMau::~NhomMau()
 {
-	delete pABO;
-	delete pRh;
+	;
 }
 
 void NhomMau::nhap()

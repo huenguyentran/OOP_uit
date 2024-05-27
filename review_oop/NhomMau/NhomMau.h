@@ -14,6 +14,7 @@ private:
 	PhanLoaiRh* pRh;
 public:
 	NhomMau();
+	NhomMau(const NhomMau& a);
 	~NhomMau();
 	bool CoTheCho(NhomMau other);
 	bool DiTruyen(NhomMau cha, NhomMau me);

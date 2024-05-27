@@ -44,7 +44,7 @@ void DanhSach::timNguoiChoMau(fstream& file)
 	int temp;
 	cout << "Nhap stt cua nguoi X: ";
 	cin >> temp;
-	cout << "Danh sach nguoi cho mau\n";
+	file << "Danh sach nguoi cho mau\n";
 
 	for (int i = 0; i < dsNhomNguoi.size(); i++)
 	{
