@@ -1,9 +1,0 @@
-Danh sach: 
-con	Nhom mau: B+
-cha ne	Nhom mau: B-
-me me	Nhom mau: AB+
------------------------
-Danh sach nguoi cho mau
-con	Nhom mau: B+
-cha ne	Nhom mau: B-
-me me	Nhom mau: AB+
