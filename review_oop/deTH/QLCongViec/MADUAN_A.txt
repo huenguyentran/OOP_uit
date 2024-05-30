@@ -1,0 +1,9 @@
+A Exporter
+Ma du an: MADUAN
+Ten du an: TENDUAN
+Mo ta du an:O TA DU AN
+Nguoi quan tri du an: 24	THI HI	nguoi quan tri
+Tai nguyen du an: 
+File: Image
+Tieu de: NDH
+Mo ta nd: DJD
