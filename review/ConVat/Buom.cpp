@@ -1,15 +1,25 @@
 #include "Buom.h"
 
 
+void Buom::nhap()
+{
+	cin >> t1 >> t2 >> t3 >> t4;
+}
+
+void Buom::xuat()
+{
+	cout << "Buom: " << t1 << ", " << t2 << ", " << t3 << ", " << t4 << endl;
+}
+
 bool Buom::dungQL()
 {
-	if (trungNo < 3 || trungNo > 8)
+	if (t1 < 3 || t1 > 8)
 		return 0;
-	if (auTrung != 15 && auTrung != 16)
+	if (t2 != 15 && t2 != 16)
 		return 0;
-	if (lotXac != 10)
+	if (t3 != 10)
 		return 0;
-	if (deTrung != 2 && deTrung != 3)
+	if (t4 != 2 && t4 != 3)
 		return 0;
 	return 1;
 }

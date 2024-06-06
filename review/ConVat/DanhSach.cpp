@@ -38,34 +38,38 @@ void DanhSach::input()
 			i--;
 			continue;
 		}
-
 		pConVat[i]->nhap();
 	}
 }
 void DanhSach::khongtheoQl()
 {
-	cout << "Cac con vat khong theo quy luat co stt la: ";
+	cout << "Cac con vat khong theo quy luat la: \n";
 	for (int i = 0; i < so_luong; i++)
 	{
-		if (!pConVat[i]->dungQL()) cout << i + 1 << "\t";
+		if (!pConVat[i]->dungQL())
+			pConVat[i]->xuat();
 	}
 	cout << "\n";
 }
 bool DanhSach::co_dadangST()
 {
-	int muoi = 0, ech = 0, buom = 0;
+	bool muoi = 0, ech = 0, buom = 0;
 	int i = 0;
-	while (i < so_luong)
+	while (i <= so_luong)
 	{
-		if (pConVat[i]->loaiSV() == MUOI) muoi = true;
-		else if (pConVat[i]->loaiSV() == ECH) ech = true;
-		else if (pConVat[i]->loaiSV() == BUOM) buom = true;
-		if (muoi && ech && buom)
-		{
-			cout << "CO DA DANG SINH THAI!!";
-			return 1;
-		}
+		if (pConVat[i]->loai() == "MUOI") 
+			muoi = true;
+		else if (pConVat[i]->loai() == "ECH") 
+			ech = true;
+		else if (pConVat[i]->loai() == "BUOM") 
+			buom = true;
 		i++;
 	}
+	if (muoi && ech && buom)
+	{
+		cout << "CO DA DANG SINH THAI!!";
+		return 1;
+	}
+	cout << "KHONG CO DA DANG SINH THAII!!";
 	return 0;
 }

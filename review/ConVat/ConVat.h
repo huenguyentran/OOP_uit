@@ -1,16 +1,14 @@
 #pragma once
 //4:45PM-->5h32PM
 #include <iostream>
+#include <string>
 using namespace std;
-enum LOAI {MUOI, ECH, BUOM};
 class ConVat
 {
-protected:
-	int trungNo, auTrung, lotXac, deTrung;
-	int loai;
 public:
-	virtual void nhap();
+	virtual void nhap() = 0;
+	virtual void xuat() = 0;
 	virtual bool dungQL() = 0;
-	int loaiSV() { return loai; }
+	virtual string loai() = 0;
 };
 
