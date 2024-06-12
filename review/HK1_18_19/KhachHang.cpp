@@ -1,59 +1,43 @@
 #include "KhachHang.h"
+
 KhachHang::KhachHang()
 {
-	pGoiDV = NULL;
+	pgoiDV = NULL;
 }
-KhachHang::KhachHang(const KhachHang& a)
-{
-	tenKH = a.tenKH;
-	pGoiDV = a.pGoiDV;
-}
+
 KhachHang::~KhachHang()
 {
-	delete pGoiDV;
+	if (pgoiDV)
+		delete pgoiDV;
+	pgoiDV = NULL;
 }
+
 void KhachHang::Nhap()
 {
-	cout << "Nhap ten khach hang: ";
-	cin.ignore();
-	getline(cin, tenKH);
-
-	cout << "Nhap so CCCD: "; cin >> soCCCD;
-	cout << "Nhap thoi gian su dung dich vu (theo thang): ";
-	cin >> tgsdDV;
+	cout << "Nhap ho ten: "; cin.ignore();
+	getline(cin, hoTen);
+	cout << "CCCD: "; cin >> CCCD;
+	cout << "Thoi giaan sd dv: "; cin >> thoiGian;
 	int temp;
 	do
 	{
-		cout << "1_Premium, 2_Basic, 3_Non-memeber: ";
+		cout << "1_premium 2_basic 3_non-member: ";
 		cin >> temp;
-		switch (temp)
-		{
-		case 1:
-			pGoiDV = new Premium;
-			break;
-		case 2:
-			pGoiDV = new Basic;
-			break;
-		case 3:
-			pGoiDV = new NonMember;
-			break;
-		default:
-			continue;
-		}
-		pGoiDV->nhap();
 	} while (temp != 1 && temp != 2 && temp != 3);
+
+	if (temp == 1) pgoiDV = new Premium;
+	else if (temp == 2) pgoiDV = new Basic;
+	else if (temp == 3) pgoiDV = new Non_member;
+	pgoiDV->Nhap();
 }
 
-string KhachHang::tostring()
+void KhachHang::Xuat()
 {
-	stringstream s;
-	s << "Ten khach hang: " << tenKH << "\tCCCD: " << soCCCD << "\n";
-	s << pGoiDV->tostring();
-	s << "Tong chi tieu: " << TinhtongChi() << "\n";
-	return s.str();
+	cout << hoTen << "\t" << CCCD << "\n";
+	pgoiDV->Xuat();
 }
 
-int KhachHang::TinhtongChi()
+int KhachHang::chiTieu()
 {
-	return pGoiDV->TongTienCuaGoi() * tgsdDV;
+	return thoiGian * pgoiDV->phi1Thang();
 }

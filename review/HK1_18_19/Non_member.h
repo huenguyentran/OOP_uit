@@ -1,12 +1,10 @@
 #pragma once
 #include "GoiDV.h"
-class Basic:public GoiDV
+class Non_member:public GoiDV
 {
-private:
-	int solopDK;
 	bool dvPT;
 public:
-	Basic();
+	Non_member();
 	void Nhap();
 	void Xuat();
 	int phi1Thang();

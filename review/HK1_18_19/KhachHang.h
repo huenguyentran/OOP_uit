@@ -1,20 +1,21 @@
 #pragma once
-#include "Basic.h"
-#include "NonMember.h"
+#include "GoiDV.h"
 #include "Premium.h"
+#include "Basic.h"
+#include "Non_member.h"
+#include <string>
+
 class KhachHang
 {
 private:
-	string tenKH, soCCCD;
-	int tgsdDV; // theo thang
-	GoiDV* pGoiDV;
+	string hoTen, CCCD;
+	GoiDV* pgoiDV; // mot khach hang co the co  nhieu goi dv ---> tg khac
+	int thoiGian;
 public:
 	KhachHang();
-	KhachHang(const KhachHang& a);
 	~KhachHang();
 	void Nhap();
-	string tostring();
-
-	int TinhtongChi();
+	void Xuat();
+	int chiTieu();
 };
 

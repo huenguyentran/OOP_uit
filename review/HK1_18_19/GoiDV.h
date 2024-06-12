@@ -1,19 +1,14 @@
 #pragma once
-#include "header.h"
-#include "DVHoTroPT.h"
-#include "DVXongHoi.h"
-#include "DVLopHoc.h"
+#include <iostream>
+using namespace std;
 
 class GoiDV
 {
 protected:
-	int phiCoBan;
-	vector <DVDiKem*> pCacDV;
-	int tongTien;
+	int phiCB;
 public:
-	virtual void nhap() = 0;
-	virtual string tostring();
-	int TongTienCuaGoi();
-
+	virtual void Nhap() = 0;
+	virtual void Xuat() = 0;
+	virtual int phi1Thang() = 0;
 };
 

@@ -2,13 +2,12 @@
 #include "GoiDV.h"
 class Premium:public GoiDV
 {
-	int chiphiLopHoc;
-	int dvXongHoi;
-	int hotroPT;
+	int solopDK;
+	bool dvXongHoi, dvPT;
 public:
 	Premium();
-	void nhap();
-
-	string tostring();
+	void Nhap();
+	void Xuat();
+	int phi1Thang();
 };
 

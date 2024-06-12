@@ -1,14 +1,10 @@
-#include "DanhSachKH.h"
+#include "TrungTam.h"
 
 int main()
 {
-	DanhSachKH list;
-	list.NhapDS();
-	fstream file("data.txt");
-	if (!file) return 1;
-	list.ghiDS(file);
-	file.close();
-
-	list.KhachHangChiTieuNhieu();
+	TrungTam a;
+	a.Nhap();
+	a.Xuat();
+	a.ChiTieuNhieu();
 	return 0;
 }

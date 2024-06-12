@@ -1,38 +1,27 @@
 #include "Basic.h"
+
 Basic::Basic()
 {
-	phiCoBan = 500;
+	phiCB = 500;
 }
 
-void Basic::nhap()
+void Basic::Nhap()
 {
-	cout << "Cac goi dang ki: \n";
-	int temp, goidv[1] = { 0 };
-	do
-	{
-		cout << "1_lop hoc, 2_ho tro PT, 3_nhap xong: ";
-		cin >> temp;
-		if (temp == 1 || temp == 2)
-		{
-			DVDiKem* ptemp = NULL;
-			if (temp == 1)
-				ptemp = new DVLopHoc(100);
-			else
-			{
-				if (goidv[temp - 2] == 0)
-				{
-					ptemp = new DVHoTroPT(100);
-					goidv[temp - 2] == 1;
-				}
-			}
-				pCacDV.push_back(ptemp);
-		}
-	} while (temp != 3);
+	cout << "So lop hoc dang ki: "; cin >> solopDK;
+	cout << "Dang ki dv ho tro PT: 1_dk, 0_ko dk: "; cin >> dvPT;
 }
 
-string Basic::tostring()
+void Basic::Xuat()
 {
-	stringstream s;
-	s << "Basic\n" << GoiDV::tostring();
-	return s.str();
+	if (solopDK) cout << "Dang ki " << solopDK << "lop hoc\n";
+	else cout << "Khong dang ki lop hoc nao\n";
+	if (dvPT) cout << "Dang ki dich vu PT\n";
+	else cout << "Khong dang ki dv ho tro PT\n";
+
 }
+
+int Basic::phi1Thang()
+{
+	return phiCB + 100 * solopDK + 100 * dvPT;
+}
+

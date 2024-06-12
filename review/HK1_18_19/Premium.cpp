@@ -1,51 +1,30 @@
 #include "Premium.h"
+
 Premium::Premium()
 {
-	phiCoBan = 1000;
-}
-void Premium::nhap()
-{
-	cout << "Cac goi dang ki: \n";
-	int temp, da_dkdv2 = 0, da_dkdv3 = 0 ;
-	do
-	{
-		cout << "1_lop hoc, 2_dich vu xong hoi, 3_ho tro PT, 4_nhap xong: ";
-		cin >> temp;
-		DVDiKem* p = NULL;
-		switch (temp)
-		{
-		case 1:
-			p = new DVLopHoc(0);
-			break;
-		case 2:
-			if (!da_dkdv2)
-			{
-				p = new DVXongHoi(0);
-				da_dkdv2 = 1;
-			}
-			else
-				cout << "Da dang ki dich vu\n";
-			break;
-		case 3:
-			if (!da_dkdv3)
-			{
-				p = new DVHoTroPT(0);
-				da_dkdv3 = 1;
-			}
-			else 
-				cout << "Da dang ki dich vu\n";
-			break;
-		default:
-			continue;
-		}
-		if (p != NULL)
-			pCacDV.push_back(p);
-	} while (temp != 4);
+	phiCB = 1000;
 }
 
-string Premium::tostring()
+void Premium::Nhap()
 {
-	stringstream s;
-	s << "Premium\n" << GoiDV::tostring();
-	return s.str();
+	cout << "So lop hoc dang ki: "; cin >> solopDK;
+	cout << "Dang ki dv xong hoi: 1_DK, 0_khong dk: "; cin >> dvXongHoi;
+	cout << "Dang ki dv ho tro PT: 1_dk, 0_ko dk: "; cin >> dvPT;
 }
+
+void Premium::Xuat()
+{
+	if (solopDK) cout << "Dang ki " << solopDK << "lop hoc\n";
+	else cout << "Khong dang ki lop hoc nao\n";
+	if (dvXongHoi) cout << "Dang ki dich vu xong hoi\n";
+	if (dvPT) cout << "Dang ki dich vu PT\n";
+	else cout << "Khong dang ki dv ho tro PT\n";
+
+}
+
+int Premium::phi1Thang()
+{
+	return phiCB;
+}
+
+
